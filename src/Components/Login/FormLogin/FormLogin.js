@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 export default function FormLogin() {
     const [inputs, setInputs] = useState({});
-
+    let tokenStore,tokenStoreUser = ""
     const handleChange = (e) => {
         const name = (e.target.name);
         const value = (e.target.value);
@@ -26,7 +26,17 @@ export default function FormLogin() {
             .then(response => response.json())
 
             // Displaying results to console
-            .then(json => console.log(json));
+            .then(data => {
+                console.log(data);
+                const userId = data[0].userId;
+                const token = data[0].token;
+                console.log(userId,token);
+                localStorage.setItem('token',token);
+                localStorage.setItem('userId',userId);
+                 tokenStore = localStorage.getItem('token')
+                 tokenStoreUser = localStorage.getItem('userId')
+                console.log('tokenStore',tokenStore,"userId",tokenStoreUser);
+            });
 
     }
     return (
