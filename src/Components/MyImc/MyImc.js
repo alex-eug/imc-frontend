@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
+import { useNavigate } from 'react-router';
+import './myImc.css'
 import axios from "axios";
 
 export default function MyImc() {
-
+    const navigate = useNavigate()
     let token = localStorage.getItem('token')
-    let userId = localStorage.getItem('userId')
+   // let userId = localStorage.getItem('userId')
     //    console.log("bonjour",token);
     const [inputs, setInputs] = useState({});
     const [imc, setImc] = useState()
@@ -20,7 +22,7 @@ export default function MyImc() {
 
    
     
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log("bonjourtoken",token);
 
@@ -31,24 +33,25 @@ export default function MyImc() {
     const bodyParameters = {
        imc: imc,
     }
-    axios.post('http://127.0.0.1:3000/myimc',{imc},config)
-    .then(console.log).catch(console.log);
-
+    await axios.post('http://127.0.0.1:3000/myimc',bodyParameters,config)
+    navigate('/showimc')
+   
     }
+
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <label>Taille(cm):
-                    <input
+            <form className='formContainer-myimc' onSubmit={handleSubmit}>
+                <label className="myimc-label">Taille(cm):
+                    <input  className='myimc-input'
                         type="number"
                         name="height"
                         value={inputs.height || ""}
                         onChange={handleChange}
                     />
                 </label>
-                <label>Poids(kg):
-                    <input
+                <label className="myimc-label">Poids(kg):
+                    <input className='myimc-input'
                         type="number"
                         name="weight"
                         value={inputs.weight || ""}
@@ -56,10 +59,11 @@ export default function MyImc() {
                     />
                 </label>
 
-                <button type='submit'>
-                    calculer votre imc
+                <button className='myimc-button' type ="submit">
+                    enregistrer votre imc
                 </button>
-
+               
+                <p className="myimc-para">{isNaN(imc)?" ":"Votre imc est de "+ imc}</p>
 
             </form>
         </div>

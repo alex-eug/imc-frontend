@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
+import  { useNavigate }  from "react-router-dom";
+import './formLogin.css'
 
 export default function FormLogin() {
+    let navigate =  useNavigate();
     const [inputs, setInputs] = useState({});
     let tokenStore,tokenStoreUser = ""
     const handleChange = (e) => {
@@ -8,7 +11,9 @@ export default function FormLogin() {
         const value = (e.target.value);
         setInputs(values => ({ ...values, [name]: value }))
     }
-
+    
+   
+    
     const handleSubmit = (e) => {
         e.preventDefault()
 
@@ -36,22 +41,24 @@ export default function FormLogin() {
                  tokenStore = localStorage.getItem('token')
                  tokenStoreUser = localStorage.getItem('userId')
                 console.log('tokenStore',tokenStore,"userId",tokenStoreUser);
+                
+                navigate('/myimc')
             });
 
     }
     return (
-        <div>
-            <form onSubmit={handleSubmit} >
-                <label>email:
-                    <input
+      
+            <form className="formContainer-login" onSubmit={handleSubmit} >
+                <label className='label-login'>email:
+                    <input className='input-login'
                         type="email"
                         name="email"
                         value={inputs.email || ""}
                         onChange={handleChange}
                     />
                 </label>
-                <label>password:
-                    <input
+                <label className='label-login'>password:
+                    <input className='input-login'
                         type="password"
                         autoComplete='password'
                         name="password"
@@ -59,8 +66,8 @@ export default function FormLogin() {
                         onChange={handleChange}
                     />
                 </label>
-                <button type="submit">envoyer</button>
+                <button className='login-button' type="submit">envoyer</button>
             </form>
-        </div>
+       
     )
 }

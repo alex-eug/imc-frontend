@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import  { useNavigate }  from "react-router-dom";
+import './formSignin.css'
 
 export default function Form() {
-
+  let navigate = useNavigate()
   const [inputs, setInputs] = useState({});
 
   const handleChange = (e) => {
@@ -13,9 +15,9 @@ export default function Form() {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (inputs.password !== inputs.passwordCheck) {
-      
-        console.log("mauvais password")
-      } else{
+
+      console.log("mauvais password")
+    } else {
       fetch("http://127.0.0.1:3000/signin", {
         method: 'POST',
         body: JSON.stringify({
@@ -31,48 +33,53 @@ export default function Form() {
 
         // Displaying results to console
         .then(json => console.log(json));
-    
+
     }
+    navigate('/login')
   }
   return (
-    <div>
-      <form onSubmit={handleSubmit} >
-        <label>email:
-          <input
-            type="email"
-            name="email"
-            value={inputs.email || ""}
-            onChange={handleChange}
-          />
-        </label>
-        <label>password:
-          <input
-            type="password"
-            autoComplete='password'
-            name="password"
-            value={inputs.password || ""}
-            onChange={handleChange}
-          />
-        </label>
-        <label>password check:
-          <input
-            type="password"
-            name="passwordCheck"
-            autoComplete='passwordCheck'
-            value={inputs.passwordCheck || ""}
-            onChange={handleChange}
-          />
-        </label>
-        <label>user-name:
-          <input
-            type="text"
-            name="userName"
-            value={inputs.userName || ""}
-            onChange={handleChange}
-          />
-        </label>
-        <button type="submit">envoyer</button>
-      </form>
-    </div>
+
+    <form className='formContainer-signin' onSubmit={handleSubmit} >
+      <label className="label-signin" >email
+        <input
+          className="input-signin"
+          type="email"
+          name="email"
+          value={inputs.email || ""}
+          onChange={handleChange}
+        />
+      </label>
+      <label className="label-signin">password
+        <input
+          className="input-signin"
+          type="password"
+          autoComplete='password'
+          name="password"
+          value={inputs.password || ""}
+          onChange={handleChange}
+        />
+      </label>
+      <label className="label-signin">password confirm
+        <input
+          className="input-signin"
+          type="password"
+          name="passwordCheck"
+          autoComplete='passwordCheck'
+          value={inputs.passwordCheck || ""}
+          onChange={handleChange}
+        />
+      </label>
+      <label className="label-signin">user-name
+        <input
+          className="input-signin"
+          type="text"
+          name="userName"
+          value={inputs.userName || ""}
+          onChange={handleChange}
+        />
+      </label>
+      <button className="signin-button" type="submit">envoyer</button>
+    </form>
+
   )
 }

@@ -1,10 +1,11 @@
 import React from 'react'
 import FormSignin from './FormSignin/FormSignin'
+import './signin.css'
 
 export default function Signin() {
   return (
-    <div>
-        <h2>SIGN IN</h2>
+    <div className='signinContainer'>
+        <h2 className="signin-title">SIGN IN</h2>
         <FormSignin />
     </div>
   )
