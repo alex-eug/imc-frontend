@@ -41,3 +41,17 @@
     font-weight: bold;
     
 }
+.not-available{
+    display: none;
+    color: red;
+    font-weight: 700;
+    margin-right: 20px;
+}
+.not-available >span{
+    color: red;
+    border: 2px solid red;
+    border-radius: 25%;
+    padding: 1px;
+    cursor: pointer;
+    margin-left: 10px;
+}

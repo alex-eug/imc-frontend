@@ -33,7 +33,7 @@ export default function ShowImc() {
   
   return (
 
-    <div>
+    <div className='graph-container'>
       <Graph
         date={date}        
         imc={imc}

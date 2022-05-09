@@ -32,7 +32,7 @@ export default function Form() {
         .then(response => response.json())
 
         // Displaying results to console
-        .then(json => console.log(json));
+        .then(json => console.log(json.userName));
 
     }
     navigate('/login')

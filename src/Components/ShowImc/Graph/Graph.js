@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './graph.css'
 import * as d3 from 'd3'
 
@@ -21,17 +21,17 @@ export default function Graph({ date, imc }) {
 
     }
     console.log('finalValue', finalValue);
-    const min = d3.min(finalValue, d => d.imc)
-    const max = d3.max(finalValue, d => d.imc)
+    // const min = d3.min(finalValue, d => d.imc)
+    // const max = d3.max(finalValue, d => d.imc)
     //const extent = d3.extent(finalValue,d=>d.imc)   
     const margin = {top:20,right:20,bottom:100,left:100}
-    const graphWidth = 800 - margin.left - margin.right;
+    const graphWidth = 1000 - margin.left - margin.right;
     const graphHeight = 600 - margin.top - margin.bottom;
    
     const svgContainer = d3.select('.svg-container')
     const svg = svgContainer.append('svg')
         .attr('height', 600)
-        .attr('width', 800)
+        .attr('width', 1000)
 
     const graph = svg.append('g')
             .attr('width',graphWidth)
@@ -51,8 +51,9 @@ export default function Graph({ date, imc }) {
     const x = d3.scaleBand()
         .domain(finalValue.map(item => item.date))
         .range([0, 700])
-        .paddingInner(0.1)
-        .paddingOuter(0.1)
+        .paddingInner(0.01)
+        .paddingOuter(0.02)
+        
     // console.log(x('20-12-2021'));
     // console.log(x('22-2-2022'));
 

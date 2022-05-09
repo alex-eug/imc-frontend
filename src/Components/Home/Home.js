@@ -1,21 +1,37 @@
 import React from 'react'
+import  { useNavigate }  from "react-router-dom";
 import './home.css'
 
+
 export default function Home() {
+  let navigate =  useNavigate();
+  const GoToImc = () => {
+    navigate('/myImc')
+}
+
   return (
     <div className='homeContainer'>
-    <h1 className='main-title-home'>Calculer votre IMC</h1>
-    <p className='home-para'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, fugit distinctio sunt dicta eaque eligendi nostrum aut vitae tenetur atque corporis dolorem facere accusantium quod omnis amet ut delectus quo.
-    Cumque exercitationem optio pariatur fuga dicta, ea natus, eaque animi sequi eius dolor quos molestias cum voluptatem magnam, enim et. A, maiores fuga? Culpa nostrum obcaecati laboriosam. Ab, dignissimos sit.
-    Rem harum quasi blanditiis? Harum consectetur commodi quidem labore assumenda. Consequatur quod ratione aliquam nemo amet neque corporis sed quasi tenetur! Necessitatibus eveniet officiis odit sed animi, quia debitis voluptatum?
-    Adipisci consequatur asperiores, ut assumenda alias, saepe aperiam delectus placeat nisi, molestiae cumque ipsum ducimus culpa odit earum ipsam! Tempora maiores quia magnam libero consectetur quis, doloribus quos corrupti debitis.
-    Recusandae atque voluptatibus porro illo nemo cupiditate perferendis labore maiores, ut non facere accusantium repellat perspiciatis tempore quod dolore similique tenetur corrupti voluptatem officia aspernatur aliquam mollitia error ratione! Dolorum.
-    Debitis iusto sunt tempora aliquid facilis vero alias ipsam. Alias culpa, eum ex voluptatem cupiditate eaque doloribus aut dolore, repudiandae tenetur pariatur a expedita, placeat atque. Ipsam rerum adipisci cupiditate.
-    
-    
-    </p>
-    
-    
+      <h1 className='main-title-home'>Calculer votre IMC</h1>
+      
+      
+      <p className='home-para'>L'Organisation mondiale de la santé (OMS) a défini en 1997 cet indice de masse corporelle comme la norme pour évaluer les risques liés au surpoids chez l’adulte. Elle a également défini des intervalles standards (maigreur, indice normal, surpoids, obésité) en se basant sur la relation constatée statistiquement entre l'IMC et le taux de mortalité.
+
+      Les compagnies américaines d'assurance maladie utilisent l'IMC comme indicateur du risque d'accident cardiovasculaire chez leurs assurés et font varier les primes sur la base de ce critère. Cependant, les accidents cardiovasculaires sont rares avant 65 ans. Il existe des moyens plus scientifiques pour déterminer les risques, mais les compagnies ne peuvent pas légalement les demander à leurs assurés : cholestérolémie, fréquence cardiaque avant et après effort, etc.
+      
+      L'IMC est surtout utile pour mettre en évidence l'augmentation des facteurs de risques. Il n'a pas vocation à déterminer précisément la valeur de la masse grasse ou, encore moins, de la masse musculaire et osseuse.
+      
+      
+      
+     <a href='https://fr.wikipedia.org/wiki/Indice_de_masse_corporelle'> <cite   className='cite'>source:wikipédia</cite></a>
+      </p>
+
+      <p
+        className='go-to-imc-button'
+        onClick={GoToImc}
+        >
+        Calcul de l'IMC
+      </p>
+
     </div>
   )
 }

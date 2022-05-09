@@ -32,12 +32,18 @@
 .div-item-nav{
     display: flex;
 }
-
+.delete-item{
+    color: brown;
+}
+.delete-item:hover{
+    color: rgb(255, 39, 39);
+    cursor:pointer;
+}
 .nav-logo{
     width: 130px;
     height: 130px;
     margin-right: auto;
-    
+    cursor: pointer;
     
 }
 

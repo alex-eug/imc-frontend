@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { Link,useNavigate } from "react-router-dom";
 import './navBar.css'
 import logo from '../../logo.png'
+import axios from 'axios';
 
 
 export default function NavBar() {
-  
+  let token = localStorage.getItem('token')
   const navigate = useNavigate()
 const disconnectUser = () =>{
   localStorage.clear();
@@ -30,6 +31,23 @@ const backToHome = ()=>{
     }
   }, [])
 
+  const deleteAccount = () => {
+    
+    let answer = prompt("voulez-vous supprimer votre compte?Y/N")
+    if(answer.toLowerCase()==="y"){
+      const config = {
+        headers: { Authorization: `Bearer ${token}` }
+    };
+      axios.delete('http://127.0.0.1:3000/delete',config)
+      localStorage.clear();
+      navigate('/')
+    }else{
+      return
+    }
+  }
+
+
+
   return (
     <nav className='nav-container'>
     {(toggleMenu || width > 500) && (
@@ -39,11 +57,17 @@ const backToHome = ()=>{
         <p className='div-item-nav'>
         <Link className='item-nav' to="/signin"> <li  >Inscription </li></Link>
         <Link className='item-nav' to="/login"> <li  > Connection </li></Link>
+        
         </p>
         :
-         <Link className='item-nav' onClick={disconnectUser} to="/"> <li>Déconnection </li></Link>
-         )}
-        
+        <p className='div-item-nav'>
+        <Link className='item-nav' onClick={disconnectUser} to="/"> <li>Déconnection </li></Link>
+        <li
+        onClick={deleteAccount}
+        className='delete-item'>Supprimer mon compte</li>
+        </p>
+        )}
+         
         </ul>
       )}
       <button className="btn-nav" onClick={toggleNav}>+</button>
