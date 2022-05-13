@@ -3,13 +3,14 @@
     left: 0;
     top: 0;
     width: 100%;
-    height: 50px;
-    background: rgb(128, 129, 224);
+    height: 100px;
+    background: antiquewhite;
+    border-bottom: 3px solid rgb(255, 171, 171);
 }
 
 .list-items-nav {
     list-style-type: none;
-    background: rgb(236, 166, 150);
+    background: antiquewhite;
     height: 100%;
     display: flex;
     justify-content: flex-end;
@@ -24,7 +25,7 @@
 }
 .item-nav  {
     margin-right: 10px;
-    color: aliceblue;
+    color: rgb(236, 166, 150);
     cursor: pointer;
     text-decoration: none;
 }
@@ -40,8 +41,8 @@
     cursor:pointer;
 }
 .nav-logo{
-    width: 130px;
-    height: 130px;
+    height: 100px;
+    width: 120px;
     margin-right: auto;
     cursor: pointer;
     

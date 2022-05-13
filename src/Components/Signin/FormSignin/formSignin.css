@@ -4,14 +4,17 @@
     justify-content: center;
     align-items: flex-end;
 
+    color: rgb(165, 104, 104);;
 }
 .input-signin{
     font-size: .7em;
     width: 300px;
-    height: 25px;
+    height: 20px;
+    margin-top: 3px;
     border-radius: 10px;
-    box-shadow: 3px 5px 5px rgb(0, 0, 0);
-
+    box-shadow: 2px 4px 4px rgb(165, 104, 104);
+    color: rgb(165, 104, 104);;
+    border: 1px solid rgb(165, 104, 104);
 }
 .label-signin{
     font-size: 1.5em;
@@ -22,22 +25,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+   
+    color: rgb(165, 104, 104);
 }
 .signin-button{
     margin-top: 40px;
     padding: 10px;
     background-color: rgb(252, 255, 255);
     border-radius:10px ;
-    box-shadow: 3px 5px 5px rgb(0, 0, 0);
+    box-shadow: 3px 5px 5px rgb(165, 104, 104);;
     text-transform: uppercase;
     font-weight: bold;
+    border: 1px solid rgb(165, 104, 104);
+    color: rgb(165, 104, 104);;
 }
 .signin-button:active{
     margin-top: 41px;
     padding: 10px;
     background-color: rgb(252, 255, 255);
     border-radius:10px ;
-    box-shadow: 1px 3px 3px rgb(0, 0, 0);
+    box-shadow: 1px 3px 3px rgb(165, 104, 104);
     text-transform: uppercase;
     font-weight: bold;
 }

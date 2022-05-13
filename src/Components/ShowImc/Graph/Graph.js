@@ -37,9 +37,12 @@ export default function Graph({ date, imc }) {
             .attr('width',graphWidth)
             .attr('height',graphHeight)
             .attr("transform", `translate(${margin.left},${margin.right})`)
+           
 
     const groupX = graph.append('g')
     .attr('transform',`translate(0,${graphHeight})` )
+    
+    
     const groupY = graph.append('g')
 
 
@@ -59,7 +62,7 @@ export default function Graph({ date, imc }) {
 
     const rects = graph.selectAll('rect')
         .data(finalValue)
-
+        
 
     rects.enter()
         .append('rect')
@@ -73,9 +76,11 @@ export default function Graph({ date, imc }) {
         .style('fill', '#7094E0')
         .attr("x", function (d) { return x(d.date) })
         .attr('y',function(d){return y(d.imc)})
-
+       
+        
 
     const axeX = d3.axisBottom(x)
+    
     const axeY = d3.axisLeft(y)
 
     groupX.call(axeX)

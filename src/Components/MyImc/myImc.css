@@ -1,7 +1,8 @@
 .myimc-container{
     display: flex;
     flex-direction: column;
-    margin: 60px 0 0 0;
+    margin: 140px 0 0 0;
+  
 }
 .title-container{
     display: flex;
@@ -11,7 +12,7 @@
 .myimc-h2{
    margin: 10px 0 0 10px;
     padding: 0px;
-   font-size: 2.5em;
+   font-size: 3.5em;
     text-transform: capitalize;
     font-weight: bold;
     color: brown;
@@ -20,11 +21,13 @@
     text-transform: capitalize;
 }
 .evo-imc{
-    margin: 10px 0 0 100px;
+    margin: 25px 0 0 100px;
     padding: 10px;
     background-color: rgb(252, 255, 255);
     border-radius:10px ;
-    box-shadow: 3px 5px 5px rgb(0, 0, 0);
+    box-shadow: 2px 4px 4px rgb(165, 104, 104);
+    color: rgb(165, 104, 104);
+    border: 1px solid rgb(165, 104, 104);
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -37,7 +40,7 @@
 
 .myimc-label{
     font-size: 1.5em;
-    
+    color:rgb(165, 104, 104); 
     text-transform: capitalize;
     margin:30px 0 0 0px;
     display: flex;
@@ -50,8 +53,11 @@
     font-size: .7em;
     width: 300px;
     height: 20px;
+    margin-top: 3px;
     border-radius: 10px;
-    box-shadow: 3px 5px 5px rgb(0, 0, 0);
+    box-shadow: 2px 4px 4px rgb(165, 104, 104);
+    color: rgb(165, 104, 104);
+    border: 1px solid rgb(165, 104, 104);
 }
 
 .myimc-button{
@@ -59,7 +65,9 @@
     padding: 5px 0px 5px 0;
     background-color: rgb(252, 255, 255);
     border-radius:10px ;
-    box-shadow: 3px 5px 5px rgb(0, 0, 0);
+    box-shadow: 2px 4px 4px rgb(165, 104, 104);
+    color: rgb(165, 104, 104);
+    border: 1px solid rgb(165, 104, 104);
     text-transform: uppercase;
     font-weight: bold;
     width: 250px;
@@ -68,7 +76,7 @@
     margin-top: 41px;
     background-color: rgb(252, 255, 255);
     border-radius:10px ;
-    box-shadow: 1px 3px 3px rgb(0, 0, 0);
+    box-shadow: 1px 3px 3px rgb(165, 104, 104);
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -76,6 +84,12 @@
 .myimc-para{
     font-size: 3em;
     color: brown;
+    text-align: center;
+}
+.connected-para{
+    display: none;
+    margin: 50px;
+    font-size: 2.5em;
     text-align: center;
 }
 .blue{

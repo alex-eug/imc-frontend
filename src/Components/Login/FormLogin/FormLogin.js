@@ -27,7 +27,7 @@ export default function FormLogin() {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        fetch("http://127.0.0.1:3000/login", {
+        fetch("https://stormy-hollows-71516.herokuapp.com/login", {
             method: 'POST',
             body: JSON.stringify({
                 email: inputs.email,
@@ -64,7 +64,7 @@ export default function FormLogin() {
     return (
         
             <form className="formContainer-login" onSubmit={handleSubmit} >
-                <label className='label-login'>email:
+                <label className='label-login'>email
                     <input className='input-login'
                         type="email"
                         name="email"
@@ -72,7 +72,7 @@ export default function FormLogin() {
                         onChange={handleChange}
                     />
                 </label>
-                <label className='label-login'>password:
+                <label className='label-login'>password
                     <input className='input-login'
                         type="password"
                         autoComplete='password'

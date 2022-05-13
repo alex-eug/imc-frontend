@@ -1,9 +1,14 @@
 .homeContainer{
-    margin: 100px 0 0 0 ;
+    margin: 130px 10% 0 10% ;
     text-align: center;
     width: 100%;
     height: 100%;
     background-color: antiquewhite;
+    width: 80%;
+    align-items: center;
+    padding:20px 0 50px 0;
+    border-radius: 10px;
+    border: 3px solid rgb(255, 171, 171);;
 }
 
 .main-title-home{
@@ -14,7 +19,7 @@
 }
 
 .home-para{
-    padding: 50px 200px;
+    padding: 50px 100px;
     text-align: center;
     font-size: 1.2em;
     text-align: justify;
@@ -24,13 +29,14 @@
 }
 
 .go-to-imc-button{
-    font-size: 2em;
-    border: 1px solid aliceblue;
-    border-radius: 3px;
+    font-size: 1.5em;
+    font-weight: 600;
+    border: 3px solid #ECA696;
+    border-radius: 5px;
     display: inline;
-    padding: 10px;
-    background:#ECA696 ;
-    color: aliceblue;
+    padding: 15px;
+    background: aliceblue;
+    color: #ECA696;
     cursor: pointer;
 }
 
