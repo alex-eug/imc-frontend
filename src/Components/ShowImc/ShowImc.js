@@ -14,7 +14,7 @@ export default function ShowImc() {
     const config = {
       headers: { Authorization: `Bearer ${token}` }
     };
-  axios.get('https://stormy-hollows-71516.herokuapp.com/showimc', config)
+  axios.get('https://stormy-hollows-71516.herokuapp.com/myimc', config)
     .then((data) => {
       let dataImc = (data.data[0]);
       dataImc.forEach(element => {

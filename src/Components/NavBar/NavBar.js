@@ -38,7 +38,7 @@ const backToHome = ()=>{
       const config = {
         headers: { Authorization: `Bearer ${token}` }
     };
-      axios.delete('http://127.0.0.1:3000/delete',config)
+      axios.delete('https://stormy-hollows-71516.herokuapp.com/delete',config)
       localStorage.clear();
       navigate('/')
     }else{

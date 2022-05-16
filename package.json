@@ -10,6 +10,7 @@
     "d3": "^7.4.4",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
+    "netlify-cli": "^10.3.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router": "^6.3.0",
@@ -18,10 +19,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-run start",
-    "build": "react-run build",
-    "test": "react-run test",
-    "eject": "react-run eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
