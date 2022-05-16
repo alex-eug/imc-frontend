@@ -47,3 +47,18 @@
     color:rgb(86, 91, 63) ;
     text-decoration: none;
 }
+
+@media screen and (max-width:500px){
+    .homeContainer{
+        width: 95%;
+        margin: 130px 2% 20px 2% ;
+    }
+    .main-title-home{
+        font-size: 2em;
+    }
+    .home-para{
+        padding: 50px 15px;
+        line-height: 1em;
+      letter-spacing: .01em;
+    }
+}

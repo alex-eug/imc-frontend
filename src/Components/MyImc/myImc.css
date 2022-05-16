@@ -1,30 +1,33 @@
-.myimc-container{
+.myimc-container {
     display: flex;
     flex-direction: column;
     margin: 140px 0 0 0;
-  
-}
-.title-container{
-    display: flex;
-    justify-content:flex-start;
+
 }
 
-.myimc-h2{
-   margin: 10px 0 0 10px;
+.title-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.myimc-h2 {
+    margin: 10px 0 0 10px;
     padding: 0px;
-   font-size: 3.5em;
+    font-size: 3.5em;
     text-transform: capitalize;
     font-weight: bold;
     color: brown;
 }
-.myimc-h2 >span{
+
+.myimc-h2>span {
     text-transform: capitalize;
 }
-.evo-imc{
+
+.evo-imc {
     margin: 25px 0 0 100px;
     padding: 10px;
     background-color: rgb(252, 255, 255);
-    border-radius:10px ;
+    border-radius: 10px;
     box-shadow: 2px 4px 4px rgb(165, 104, 104);
     color: rgb(165, 104, 104);
     border: 1px solid rgb(165, 104, 104);
@@ -32,24 +35,29 @@
     font-weight: bold;
 }
 
-.formContainer-myimc{
+.evo-imc:active {
+    margin-top: 26px;
+    box-shadow: 1px 3px 3px rgb(165, 104, 104);
+}
+
+.formContainer-myimc {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
 }
 
-.myimc-label{
+.myimc-label {
     font-size: 1.5em;
-    color:rgb(165, 104, 104); 
+    color: rgb(165, 104, 104);
     text-transform: capitalize;
-    margin:30px 0 0 0px;
+    margin: 30px 0 0 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
-.myimc-input{
+.myimc-input {
     font-size: .7em;
     width: 300px;
     height: 20px;
@@ -60,11 +68,11 @@
     border: 1px solid rgb(165, 104, 104);
 }
 
-.myimc-button{
+.myimc-button {
     margin-top: 40px;
     padding: 5px 0px 5px 0;
     background-color: rgb(252, 255, 255);
-    border-radius:10px ;
+    border-radius: 10px;
     box-shadow: 2px 4px 4px rgb(165, 104, 104);
     color: rgb(165, 104, 104);
     border: 1px solid rgb(165, 104, 104);
@@ -72,29 +80,69 @@
     font-weight: bold;
     width: 250px;
 }
-.myimc-button:active{
+
+.myimc-button:active {
     margin-top: 41px;
     background-color: rgb(252, 255, 255);
-    border-radius:10px ;
+    border-radius: 10px;
     box-shadow: 1px 3px 3px rgb(165, 104, 104);
     text-transform: uppercase;
     font-weight: bold;
 }
 
-.myimc-para{
+.myimc-para {
     font-size: 3em;
     color: brown;
     text-align: center;
 }
-.connected-para{
+
+.connected-para {
     display: none;
     margin: 50px;
     font-size: 2.5em;
     text-align: center;
 }
-.blue{
+
+.blue {
     color: blue;
 }
-.green{
+
+.green {
     color: green;
+}
+
+@media screen and (max-width:500px) {
+    .title-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .evo-imc {
+        margin: 25px 0 0 0px;
+        padding: 10px;
+        width: 70%;
+    }
+
+    .myimc-button {
+        margin: 40px;
+        padding: 10px 0px 7px 0;
+        width: 250px;
+        text-align: center;
+    }
+    .myimc-h2{
+        text-align: center;
+        font-size: 2em;
+    }
+    .myimc-para {
+        font-size: 2em;
+    }
+    .formContainer-myimc {
+        margin:10px 0 0 0;
+        align-items: center;
+    }
+    .connected-para{
+        font-size: 1.5em;
+        
+    }
 }

@@ -15,3 +15,10 @@
     font-size: 3em;
     color: rgb(165, 104, 104);
 }
+
+@media screen and (max-width:500px){
+    .signinContainer{
+        width: 80%;
+        margin: 130px 10% 0 10%;
+    }
+}

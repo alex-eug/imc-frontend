@@ -65,3 +65,9 @@
     cursor: pointer;
     margin-left: 5px;
 }
+
+@media screen and (max-width:500px){
+    .input-login{
+        width: 250px;
+    }
+}

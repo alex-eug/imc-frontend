@@ -48,3 +48,9 @@
     text-transform: uppercase;
     font-weight: bold;
 }
+
+@media screen and (max-width:500px){
+    .input-signin{
+        width: 250px;
+    }
+}
